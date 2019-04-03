@@ -16,3 +16,7 @@ Example:
   cd test-html
   python -m SimpleHTTPServer
 ```
+
+## Emojis!
+
+It looks like this bug is tied to using emojis in Chrome. If you switch between the two files (index.html and no-emoji.html) then the program stops crashing.

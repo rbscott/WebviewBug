@@ -12,8 +12,6 @@ import { WebView } from "react-native-webview"
 
 type Props = {}
 export default class App extends Component<Props> {
-	// Use this as a query parameter when running locally to bust the cache.
-	// (e.g c=${this.cacheBuster}) this doesn't work when running against github.
 	cacheBuster = Date.now()
 
 	render() {
@@ -21,9 +19,19 @@ export default class App extends Component<Props> {
 			<View style={styles.container}>
 				<WebView
 					style={styles.webview}
+					// This one crashes
 					source={{
-						uri: `https://rbscott.github.io/WebviewBug/docs/`,
+						uri: `https://rbscott.github.io/WebviewBug/index.html?c=${
+							this.cacheBuster
+						}`,
 					}}
+
+					// This one does not.
+					// source={{
+					// 	uri: `https://rbscott.github.io/WebviewBug/no-emoji.html?c=${
+					// 		this.cacheBuster
+					// 	}`,
+					// }}
 				/>
 			</View>
 		)
