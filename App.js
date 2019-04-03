@@ -24,25 +24,9 @@ export default class App extends Component<Props> {
 	render() {
 		return (
 			<View style={styles.container}>
-				{/* <Text style={styles.welcome}>Welcome to Simple Test!</Text>
-				<Text style={styles.instructions}>To get started, edit App.js</Text>
-				<Text style={styles.instructions}>{instructions}</Text>
-				<Text>Why not?</Text> */}
 				<WebView
 					style={styles.webview}
-					source={{ uri: "http://192.168.7.180:3000/" }}
-					// overScrollMode="never"
-					// bounces={false}
-					// scrollEnabled={false}
-					// hideKeyboardAccessoryView={true}
-					// allowsBackForwardNavigationGestures={true}
-					// injectedJavaScript={` window['customstuff'] = 'hello'`}
-					// onMessage={this.handleMessage}
-					// onLoadEnd={this.handleFinishLoading}
-					// onLoadStart={this.handleStartLoading}
-					// // Need https://* on iOS for embeds to work.
-					// originWhitelist={["notion" + "://*", "https://*", "http://*"]}
-					// allowFileAccess={true}
+					source={{ uri: "https://rbscott.github.io/WebviewBug/docs/" }}
 				/>
 			</View>
 		)
